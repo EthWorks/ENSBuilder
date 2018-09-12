@@ -2,7 +2,9 @@
 
 # ENSBuilder
 
-ENSBuilder lets you set up your own ENS instance for testing. Works with [ethers.js](https://github.com/ethers-io/ethers.js/) and [web3js](https://github.com/web3js/).
+ENSBuilder lets you set up your own ENS instance for testing.
+
+Works best with [ethers.js](https://github.com/ethers-io/ethers.js/) and can be used with [web3js](https://github.com/ethereum/web3.js/y) (see [Using with Web3](#using-with-web3) section below).
 
 ## Basic usage
 
@@ -17,7 +19,7 @@ const provider = await builder.bootstrapWith('example', 'eth');
 ```
 
 This will setup ENS, register top-level domain `eth` and domain under it `example.eth`.
-It will also create a registrar for `example.eth` as well as global resolver and reverse registrar.
+It will also create a registrar for `example.eth` as well as a global resolver and a reverse registrar.
 
 The method will return `ethers` provider pre-configured with new ENS.
 
@@ -35,6 +37,16 @@ Now you can use provider's method for domain resolution, e.g.:
 ```js
 const address = provider.resolveName('example.eth');
 const name = provider.lookupAddress('example.eth');
+```
+
+## Using with web3
+To use with web3 you will have to wrap web3 provider with ethersProvider as well as address into ethers wallet:
+```js
+const privateKey = ...;
+const web3Provider = ...;
+const ethersProvider = new providers.Web3Provider(web3Provider);
+wallet = new ethers.Wallet(privateKey, ethersProvider);
+builder = new ENSBuilder(deployer);
 ```
 
 ## Advanced usage
@@ -72,4 +84,3 @@ To register domain without registrar pointing to given address:
 ```js
 await builder.registerAddress('alex', 'mylogin.eth', givenAddress);
 ```
-
