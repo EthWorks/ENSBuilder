@@ -55,7 +55,15 @@ class ENSBuilder {
     await this.registrars[domain].register(hashLabel, this.deployer.address);
     await this.ens.setResolver(node, this.resolver.address);
     await this.resolver.setAddr(node, address);
-    this.registrars['addr.reverse'].setName('alex.mylogin.eth');
+  }
+
+  async registerAddressWithReverse(label, domain, wallet) {
+    const node = namehash(`${label}.${domain}`);
+    const hashLabel = utils.keccak256(utils.toUtf8Bytes(label));
+    await this.registrars[domain].register(hashLabel, this.deployer.address);
+    await this.ens.setResolver(node, this.resolver.address);
+    await this.resolver.setAddr(node, wallet.address);
+    this.registrars['addr.reverse'].connect(wallet).setName('alex.mylogin.eth');
   }
 
   async bootstrapWith(label, domain) {

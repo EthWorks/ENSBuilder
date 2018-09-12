@@ -2,7 +2,7 @@
 
 # ENSBuilder
 
-ENSBuilder lets you set up your own ENS instance for testing. Works with [ethers.js](https://github.com/ethers-io/ethers.js/).
+ENSBuilder lets you set up your own ENS instance for testing. Works with [ethers.js](https://github.com/ethers-io/ethers.js/) and [web3js](https://github.com/web3js/).
 
 ## Basic usage
 
@@ -20,16 +20,22 @@ This will setup ENS, register top-level domain `eth` and domain under it `exampl
 It will also create a registrar for `example.eth` as well as global resolver and reverse registrar.
 
 The method will return `ethers` provider pre-configured with new ENS.
-You can use provider methods for domain resolution, e.g.:
-```js
-const address = provider.resolveName('example.eth');
-```
 
 You can now register subdomain of `mylogin.eth`, pointing to given address e.g.:
 ```js
 await builder.registerAddress('alex', 'mylogin.eth', givenAddress);
 ```
 
+If you want to include reverse record, use `registerAddressWithReverse` which requires wallet as the last argument:
+```js
+await builder.registerAddressWithReverse('alex', 'mylogin.eth', wallet);
+```
+
+Now you can use provider's method for domain resolution, e.g.:
+```js
+const address = provider.resolveName('example.eth');
+const name = provider.lookupAddress('example.eth');
+```
 
 ## Advanced usage
 To bootstrap system without any domains yet:
