@@ -56,7 +56,7 @@ class ENSBuilder {
     await this.registrars[domain].register(hashLabel, this.deployer.address);
     await this.ens.setResolver(node, this.resolver.address);
     await this.resolver.setAddr(node, address);
-    await this.resolver.setName(node, label);
+    this.registrars['addr.reverse'].setName('alex.mylogin.eth');
   }
 
   async bootstrapWith(label, domain) {

@@ -4,7 +4,7 @@
 
 ENSBuilder lets you set up your own ENS instance for testing. Works with `ethers.js`.
 
-## Basic usage:
+## Basic usage
 
 To create a new instance of the builder using `ethers.js` Wallet:
 ```js
