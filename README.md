@@ -2,11 +2,11 @@
 
 # ENSBuilder
 
-ENSBuilder lets you set up your own ENS instance for testing. Works with `ethers.js`.
+ENSBuilder lets you set up your own ENS instance for testing. Works with [ethers.js](https://github.com/ethers-io/ethers.js/).
 
 ## Basic usage
 
-To create a new instance of the builder using `ethers.js` Wallet:
+To create a new instance of the builder using [ethers.js wallet](https://docs.ethers.io/ethers.js/html/api-wallet.html):
 ```js
 const builder = new ENSBuilder(wallet);
 ```
@@ -16,10 +16,10 @@ The fastest way to setup testing environment is to call `bootstrapWith`:
 const provider = await builder.bootstrapWith('example', 'eth');
 ```
 
-This will setup ENS, register top-level domain `eth` and `example.eth`.
-It will also create a registrar, resolver and reverse registrar for `example.eth`.
+This will setup ENS, register top-level domain `eth` and domain under it `example.eth`.
+It will also create a registrar for `example.eth` as well as global resolver and reverse registrar.
 
-This will return `ethers` provider pre-configured with new ENS.
+The method will return `ethers` provider pre-configured with new ENS.
 You can use provider methods for domain resolution, e.g.:
 ```js
 const address = provider.resolveName('example.eth');
