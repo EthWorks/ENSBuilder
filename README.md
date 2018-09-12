@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/EthWorks/ENSBuilder.svg?branch=master)](https://travis-ci.org/EthWorks/ENSBuilder)
+
 # ENSBuilder
 
 ENSBuilder lets you set up your own ENS instance for testing. Works with `ethers.js`.
