@@ -1828,13 +1828,6 @@ ethereum-common@^0.0.18:
   version "0.0.18"
   resolved "https://registry.yarnpkg.com/ethereum-common/-/ethereum-common-0.0.18.tgz#2fdc3576f232903358976eb39da783213ff9523f"
 
-ethereum-waffle@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ethereum-waffle/-/ethereum-waffle-0.2.0.tgz#321f14a21a46c7ed9d02c68cfa68a2d2afc844a6"
-  dependencies:
-    ethers "^3.0.27"
-    solc "^0.4.24"
-
 ethereumjs-abi@0.6.5, ethereumjs-abi@^0.6.5:
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/ethereumjs-abi/-/ethereumjs-abi-0.6.5.tgz#5a637ef16ab43473fa72a29ad90871405b3f5241"
@@ -4017,7 +4010,7 @@ slice-ansi@1.0.0:
   dependencies:
     is-fullwidth-code-point "^2.0.0"
 
-solc@0.4.24, solc@^0.4.2, solc@^0.4.24:
+solc@0.4.24, solc@^0.4.2:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/solc/-/solc-0.4.24.tgz#354f14b269b38cbaa82a47d1ff151723502b954e"
   dependencies:

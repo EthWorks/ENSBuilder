@@ -1,7 +1,6 @@
 const chai = require('chai');
 const ENSBuilder = require('../index');
-const {createMockProvider, getWallets} = require('ethereum-waffle');
-const {withENS, lookupAddress} = require('../lib/utils');
+const {withENS, getWallets, createMockProvider, lookupAddress} = require('../lib/utils');
 const {expect} = chai;
 
 describe('ENS Builder', async () => {

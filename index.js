@@ -1,6 +1,5 @@
 const {utils} = require('ethers');
-const {addressToBytes32, withENS} = require('./lib/utils');
-const {deployContract} = require('ethereum-waffle');
+const {addressToBytes32, withENS, deployContract} = require('./lib/utils');
 const ENSRegistry = require('./abi/ENSRegistry');
 const PublicResolver = require('./abi/PublicResolver');
 const FIFSRegistrar = require('./abi/FIFSRegistrar');
