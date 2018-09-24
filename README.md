@@ -10,6 +10,7 @@ Works best with [ethers.js](https://github.com/ethers-io/ethers.js/) and can be 
 
 To create a new instance of the builder using [ethers.js wallet](https://docs.ethers.io/ethers.js/html/api-wallet.html):
 ```js
+import ENSBuilder from 'ens-builder';
 const builder = new ENSBuilder(wallet);
 ```
 
