@@ -7,6 +7,10 @@ ENSBuilder lets you set up your own ENS instance for testing purposes.
 Works best with [ethers.js](https://github.com/ethers-io/ethers.js/), but can also be used with [web3js](https://github.com/ethereum/web3.js/y) (see [Using with Web3](#using-with-web3) section below).
 
 ## Basic usage
+To install:
+```sh
+npm install ens-builder
+```
 
 To create a new instance of the builder using [ethers.js wallet](https://docs.ethers.io/ethers.js/html/api-wallet.html):
 ```js
