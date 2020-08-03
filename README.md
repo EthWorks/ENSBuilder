@@ -1,3 +1,8 @@
+## Depreciation notice
+This npm is deprecated and not supported anymore. 
+For ENS testing functionality use [@ethereum-waffle/ens](https://github.com/EthWorks/Waffle/tree/master/waffle-ens).
+
+
 [![Build Status](https://travis-ci.org/EthWorks/ENSBuilder.svg?branch=master)](https://travis-ci.org/EthWorks/ENSBuilder)
 
 # ENSBuilder
